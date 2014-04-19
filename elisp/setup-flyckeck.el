@@ -33,10 +33,8 @@ up before you execute another command."
   (flycheck-buffer-automatically 'idle-change))
 
 (flycheck-define-checker sbt
-                         "A Scala syntax checker using the Scala compiler.
-
-See URL `http://www.scala-lang.org/'."
-                         :command ("/Users/andrews/dev/sbtout.sh")
+                         "sbt compile checker"
+                         :command ("/Users/andrews/dev/sbtout/sbtout.sh")
                          :error-patterns
                          ((error line-start "[error] " (file-name) ":" line ": " (message) line-end))
                          :modes scala-mode)

@@ -7,7 +7,7 @@
 (transient-mark-mode t);higlight to mark
 (delete-selection-mode t);delete selection on any key press (replace selection) :o)
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))  ;;remove scrollbar
-(tool-bar-mode nil);Hate this toolbar. remove it
+(tool-bar-mode -1);Hate this toolbar. remove it
 (display-time);self explaining
 (c-set-offset 'case-label '+);case should be idented from switch
 (global-hl-line-mode 1) ;; Highlight current line
