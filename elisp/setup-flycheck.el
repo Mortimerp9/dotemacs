@@ -32,12 +32,16 @@ up before you execute another command."
   (flycheck-clear-idle-change-timer)
   (flycheck-buffer-automatically 'idle-change))
 
-(flycheck-define-checker sbt
+;;define sbt checker
+(defmacro sbt-flycheck-define ()
+`(flycheck-define-checker sbt
                          "sbt compile checker"
-                         :command ("/Users/andrews/dev/sbtout/sbtout.sh")
+                         :command (,(concat user-home-directory "dev/sbtout/sbtout.sh"))
                          :error-patterns
-                         ((error line-start "[error] " (file-name) ":" line ": " (message) line-end))
+                         ((error line-start "[error] " (file-name) ":" line ": " (message) line-end)
+                          (warning line-start "[warning] " (file-name) ":" line ": " (message) line-end))
                          :modes scala-mode)
-
+)
+(sbt-flycheck-define)
 
 (provide 'setup-flycheck)

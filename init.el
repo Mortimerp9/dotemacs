@@ -1,6 +1,7 @@
 (require  'cl)
 (load-library "cl-macs")
 
+;;(add-to-list 'load-path user-emacs-directory)
 (add-to-list 'load-path (concat user-emacs-directory "elisp"))
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/")
 
@@ -27,7 +28,6 @@
 (setq ns-function-modifier 'hyper)
 
 (require 'setup-package)
-
 
 (require 'better-defaults)
 (require 'appearance)
@@ -78,7 +78,8 @@
 ;; Don't open files from the workspace in a new frame
 (setq ns-pop-up-frames nil)
 
-;; (autoload 'flycheck-mode "setup-flycheck" nil t)
+(autoload 'flycheck-mode "setup-flycheck" nil t)
+(autoload 'scala-mode "setup-scalamode" nil t)
 
 (load-library "dotBindings")
 ;;(load-library "dotTeX")
@@ -93,6 +94,3 @@
 
 (require 'setup-diminish)
 
-(add-hook 'scala-mode-hook
-          (lambda ()
-              (ggtags-mode 1)))
