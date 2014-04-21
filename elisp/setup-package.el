@@ -65,6 +65,7 @@ re-downloaded in order to locate PACKAGE."
      js2-refactor
      powerline
      scala-mode2
+     sbt-mode
      smex
      ggtags
      dash
