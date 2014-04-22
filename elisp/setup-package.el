@@ -76,6 +76,9 @@ re-downloaded in order to locate PACKAGE."
      rainbow-delimiters
      naquadah-theme
      markdown-mode+
+     easy-kill
+     expand-region
+     highlight-symbol
      )))
 
 (condition-case nil

@@ -11,6 +11,9 @@
             (ggtags-mode 1)
             (flycheck-mode 1)
             (flycheck-select-checker 'sbt)
+            (highlight-symbol-mode 1)
             ))
 
 (provide 'setup-scalamode)
+
+;;(file-name-nondirectory (directory-file-name (locate-dominating-file (file-truename default-directory) "build.sbt")))
