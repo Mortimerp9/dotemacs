@@ -79,6 +79,14 @@ re-downloaded in order to locate PACKAGE."
      easy-kill
      expand-region
      highlight-symbol
+     indent-guide
+     fic-mode
+     cl-lib
+     anzu
+     iy-go-to-char
+     key-chord
+     smart-forward
+    undo-tree
      )))
 
 (condition-case nil

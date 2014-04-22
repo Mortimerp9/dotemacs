@@ -22,10 +22,6 @@
 
 (add-to-list 'custom-theme-load-path (concat user-emacs-directory "themes"))
 
-;; change command to meta
-(setq mac-option-modifier 'super)
-(setq mac-command-modifier 'meta)
-(setq ns-function-modifier 'hyper)
 
 (require 'setup-package)
 
@@ -71,6 +67,7 @@
 
 (projectile-global-mode)
 (setq projectile-indexing-method 'native)
+(setq projectile-enable-caching t)
 (add-to-list 'projectile-globally-ignored-directories "target")
 (add-to-list 'projectile-globally-ignored-directories ".target")
 (add-to-list 'projectile-globally-ignored-directories "bin")
@@ -97,3 +94,16 @@
 (global-set-key [remap kill-ring-save] 'easy-kill)
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
+
+(require 'indent-guide)
+(indent-guide-global-mode)
+(setq indent-guide-char "|")
+
+(require 'fic-mode)
+(turn-on-fic-mode)
+
+(global-anzu-mode +1)
+
+(autoload 'magit-status "magit")
+
+(require 'dotBindings)
