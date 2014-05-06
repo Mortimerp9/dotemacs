@@ -87,6 +87,7 @@ re-downloaded in order to locate PACKAGE."
      key-chord
      smart-forward
     undo-tree
+    helm-ls-git
      )))
 
 (condition-case nil

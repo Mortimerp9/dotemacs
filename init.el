@@ -3,6 +3,8 @@
 
 ;;(add-to-list 'load-path user-emacs-directory)
 (add-to-list 'load-path (concat user-emacs-directory "elisp"))
+(add-to-list 'load-path (concat user-emacs-directory "vendor"))
+(add-to-list 'load-path (concat user-emacs-directory "vendor/realtime-markdown-viewer"))
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/")
 
 ;;brew install path
@@ -63,7 +65,7 @@
 (require 'smex)
 (smex-initialize)
 
-(global-git-gutter+-mode t)
+;;(global-git-gutter+-mode t)
 
 (projectile-global-mode)
 (setq projectile-indexing-method 'native)
@@ -103,7 +105,5 @@
 (turn-on-fic-mode)
 
 (global-anzu-mode +1)
-
-(autoload 'magit-status "magit")
 
 (require 'dotBindings)

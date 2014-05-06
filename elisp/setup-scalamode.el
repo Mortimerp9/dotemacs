@@ -12,7 +12,9 @@
             (flycheck-mode 1)
             (flycheck-select-checker 'sbt)
             (highlight-symbol-mode 1)
-            ))
+            (linum-mode 1)
+            (fic-mode 1)
+            ))xs
 
 (provide 'setup-scalamode)
 
