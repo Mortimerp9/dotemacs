@@ -19,7 +19,11 @@
 (setq-default js2-strict-missing-semi-warning nil)
 (setq-default js2-strict-trailing-comma-warning t) ;; jshint does not warn about this now for some reason
 
+(require 'flycheck)
+(require 'js2-mode)
 (add-hook 'js2-mode-hook (lambda () (flycheck-mode 1)))
+(add-hook 'js-mode-hook 'js2-minor-mode)
+(add-hook 'js2-mode-hook 'ac-js2-mode)
 
 (require 'js2-refactor)
 (js2r-add-keybindings-with-prefix "C-c C-m")
@@ -184,9 +188,9 @@
 (require 'json)
 
 ;; Tern.JS
-(add-to-list 'load-path (expand-file-name "tern/emacs" site-lisp-dir))
-(autoload 'tern-mode "tern.el" nil t)
-;;(add-hook 'js2-mode-hook (lambda () (tern-mode t)))
+;;(add-to-list 'load-path (expand-file-name "tern/emacs" site-lisp-dir))
+;;(autoload 'tern-mode "tern.el" nil t)
+(add-hook 'js-mode-hook (lambda () (tern-mode t)))
 (eval-after-load 'auto-complete
   '(eval-after-load 'tern
      '(progn

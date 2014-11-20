@@ -7,7 +7,7 @@
 (eval-after-load "Helm" '(diminish 'helm-mode "hl"))
 (eval-after-load "Guide-Key" '(diminish 'guide-key-mode))
 (eval-after-load "abbrev"  '(diminish 'abbrev-mode "Ab"))
-(eval-after-load "yasnippet" '(diminish 'yas/minor-mode "Y"))
+;;(eval-after-load "yasnippet" '(diminish 'yas/minor-mode "Y"))
 (eval-after-load "Anzu" '(diminish 'anzu-mode))
 
 ;;make projectile shorter

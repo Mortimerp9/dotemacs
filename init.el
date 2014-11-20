@@ -44,7 +44,7 @@
 
 (eval-after-load 'ido '(require 'setup-ido))
 (eval-after-load 'magit '(require 'setup-magit))
-(eval-after-load 'js2-mode '(require 'setup-js2-mode))
+(require 'setup-js2-mode)
 
 (require 'setup-hippie)
 
@@ -107,3 +107,7 @@
 (global-anzu-mode +1)
 
 (require 'dotBindings)
+
+
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))

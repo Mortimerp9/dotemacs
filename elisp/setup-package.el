@@ -1,6 +1,6 @@
 (require 'package)
 ;; Add melpa to package repos
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 
 (package-initialize)
 
@@ -62,7 +62,10 @@ re-downloaded in order to locate PACKAGE."
      helm-projectile
      helm
      js2-mode
+     ac-js2
      js2-refactor
+     tern
+     tern-auto-complete
      powerline
      scala-mode2
      sbt-mode
@@ -86,8 +89,10 @@ re-downloaded in order to locate PACKAGE."
      iy-go-to-char
      key-chord
      smart-forward
-    undo-tree
-    helm-ls-git
+     undo-tree
+     helm-ls-git
+     sass-mode
+     exec-path-from-shell
      )))
 
 (condition-case nil
