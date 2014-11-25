@@ -91,8 +91,13 @@ re-downloaded in order to locate PACKAGE."
      smart-forward
      undo-tree
      helm-ls-git
-     sass-mode
+     scss-mode
+     flymake-sass
      exec-path-from-shell
+     smart-mode-line
+     fill-column-indicator
+     aggressive-indent
+     fancy-narrow
      )))
 
 (condition-case nil

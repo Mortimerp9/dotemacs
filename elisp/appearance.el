@@ -22,7 +22,19 @@
       redisplay-dont-pause t       ;; Don't defer screen updates when performing operations
 )
 
-(require 'powerline)
-(powerline-center-theme)
+;;(require 'powerline)
+;;(powerline-center-theme)
+(sml/setup)
+
+(require 'fill-column-indicator)
+(setq fci-rule-width 1)
+(setq fci-rule-color "grey19")
+(define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
+(global-fci-mode 1)
+
+(define-globalized-minor-mode global-fancy-narrow-mode fancy-narrow-mode (lambda () (fancy-narrow-mode 1)))
+(global-fancy-narrow-mode 1)
+
+
 
 (provide 'appearance)

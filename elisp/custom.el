@@ -15,6 +15,7 @@
  '(TeX-view-program-selection (quote ((output-pdf "Skim") (output-dvi "Skim"))) t)
  '(auto-completion-min-chars 2)
  '(completion-auto-show nil)
+ '(custom-safe-themes (quote ("6a37be365d1d95fad2f4d185e51928c789ef7a4ccf17e7ca13ad63a8bf5b922f" default)))
  '(font-latex-user-keyword-classes (quote (("textodo" ("todo" "globaltodo") (:height 1.5 :weight bold :foreground "red" :background "white") (command 1)))))
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
@@ -35,5 +36,4 @@
  ;; If there is more than one, they won't work right.
  '(rainbow-delimiters-depth-2-face ((t (:foreground "SteelBlue4"))))
  '(rainbow-delimiters-depth-3-face ((t (:foreground "wheat2"))))
- '(rainbow-delimiters-depth-4-face ((t (:foreground "LightSkyBlue3"))))
-)
+ '(rainbow-delimiters-depth-4-face ((t (:foreground "LightSkyBlue3")))))

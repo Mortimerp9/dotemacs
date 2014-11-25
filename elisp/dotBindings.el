@@ -126,6 +126,8 @@
 (global-set-key (kbd "<M-return>") 'new-line-dwim)
 (global-set-key (kbd "C-c d") 'duplicate-current-line-or-region)
 
+(global-set-key (kbd "C-c ;") 'comment-dwim)
+
 (global-undo-tree-mode)
 (browse-kill-ring-default-keybindings)
 

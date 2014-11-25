@@ -111,3 +111,10 @@
 
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
+
+(require 'lcd-frame-title)
+(setq frame-title-format '(:eval (or (lcd-frame-title) "%b")))
+
+(setq scss-compile-at-save nil)
+
+(global-aggressive-indent-mode 1)
