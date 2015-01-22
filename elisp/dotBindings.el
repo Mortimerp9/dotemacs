@@ -96,12 +96,12 @@
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
-(require 'key-chord)
-(key-chord-mode 1)
-(key-chord-define-global "fg" 'iy-go-to-char)
-(key-chord-define-global "df" 'iy-go-to-char-backward)
-(key-chord-define-global "dd" 'kill-and-retry-line)
-(key-chord-define-global "qr" 'vr/query-replace)
+;; (require 'key-chord)
+;; (key-chord-mode 1)
+;; (key-chord-define-global "fg" 'iy-go-to-char)
+;; (key-chord-define-global "df" 'iy-go-to-char-backward)
+;; (key-chord-define-global "dd" 'kill-and-retry-line)
+;; (key-chord-define-global "qr" 'vr/query-replace)
 ;;aliases
 (defalias 'qr 'vr/query-replace)
 (defalias 'eb 'ediff-buffers)

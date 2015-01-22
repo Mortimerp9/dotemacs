@@ -27,6 +27,8 @@
 
 (require 'setup-package)
 
+
+
 (require 'better-defaults)
 (require 'appearance)
 
@@ -89,7 +91,8 @@
 (volatile-highlights-mode 1)
 
 (require 'rainbow-delimiters)
-(global-rainbow-delimiters-mode)
+(add-hook 'js2-mode #'rainbow-delimiters-mode)
+(add-hook 'emacs-lisp-mode #'rainbow-delimiters-mode)
 
 (require 'setup-diminish)
 
@@ -117,4 +120,10 @@
 
 (setq scss-compile-at-save nil)
 
-(global-aggressive-indent-mode 1)
+(setq save-interprogram-paste-before-kill nil)
+
+(add-hook 'yaml-mode-hook '(lambda () (ansible 1)))
+
+(defun projectile-helm-ag ()
+  (interactive)
+  (helm-do-ag (projectile-project-root)))

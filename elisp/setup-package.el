@@ -4,9 +4,7 @@
 
 (package-initialize)
 
-
 (require 'dash)
-
 
 (unless (file-exists-p "~/.emacs.d/elpa/archives/melpa")
   (package-refresh-contents))
@@ -71,7 +69,6 @@ re-downloaded in order to locate PACKAGE."
      sbt-mode
      smex
      ggtags
-     dash
      project-explorer
      helm-flycheck
      helm-swoop
@@ -92,12 +89,14 @@ re-downloaded in order to locate PACKAGE."
      undo-tree
      helm-ls-git
      scss-mode
-     flymake-sass
      exec-path-from-shell
      smart-mode-line
      fill-column-indicator
      aggressive-indent
      fancy-narrow
+     yaml-mode
+     ansible
+     ag
      )))
 
 (condition-case nil
